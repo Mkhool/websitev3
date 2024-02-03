@@ -1,0 +1,424 @@
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background-color: antiquewhite;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #444
+}
+
+h1 {
+    font-family: "crete round", serif;
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 55px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 24px;
+
+}
+
+p {
+    line-height: 20px;
+    color: #777;
+}
+
+
+.wrapper {
+    width: 940px;
+    margin: 0 auto;
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #444
+}
+
+.clear {
+    clear: both;
+}
+
+small {
+    font-size: 13px;
+    font-style: italic;
+}
+
+/*HEADER*/
+header {
+    height: 200px;
+    flex-direction: row;
+
+}
+
+header h1 {
+    width: 100vw;
+    margin-top: 32px;
+    text-align: center;
+    background: url(image/Lucky-Shrub-Logos/Asset2.png) no-repeat 50%;
+    background-size: 5%;
+
+}
+
+
+header nav {
+
+    margin-top: 30px;
+    justify-content: center;
+}
+
+
+header nav ul a {
+    font-size: 30px;
+    color: #356b30;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 50px;
+    width: 100vw;
+
+}
+
+
+
+
+/*MAIN IMAGE*/
+
+#home {
+    height: 580px;
+
+
+}
+
+#home #img {
+    position: absolute;
+    height: 580px;
+    width: 100%;
+    background: url(https://img.freepik.com/photos-gratuite/feuilles-palmier-tropical-motif-fond-vert-monstera-feuillage-decoration-design-plante-gros-plan-feuilles-exotiques_90220-1135.jpg?w=996&t=st=1695472398~exp=1695472998~hmac=2f4889fe818a5c3a0c4223dcd6c3ac8db901a551a1b0a91a220a81efc2d3e494) center;
+    background-size: cover;
+    z-index: -1;
+}
+
+#home h2 {
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 150px 0 40px 0;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.button-1 {
+    display: block;
+    width: 120PX;
+    height: 50px;
+    background: #ff7a00;
+    color: #fff;
+    font-size: 20px;
+    margin: 0 auto;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 3px;
+
+}
+
+.button-1:hover {
+    background: #356b30;
+}
+
+/* product */
+
+#products ul {
+    margin: 80px 0;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+
+}
+
+#products ul li {
+    width: 300px;
+
+    padding-top: 200px;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+}
+
+#products h4 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+}
+
+#product p {
+
+    margin-bottom: 20px;
+
+}
+
+#product-1 {
+    background: url(image/Lucky-Shrub-Logos/Asset2.png) no-repeat top center;
+    background-size: 30%;
+
+}
+
+#product-2 {
+    background: url(image/Lucky-Shrub-Logos/Asset2.png) no-repeat top center;
+    background-size: 30%;
+}
+
+#product-3 {
+    background: url(image/Lucky-Shrub-Logos/Asset2.png) no-repeat top center;
+    background-size: 30%;
+}
+
+
+#info {
+    padding: 60px 0;
+    max-width: 850px;
+
+}
+
+#info h3 {
+    width: 100vw;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#info p {
+    text-align: center;
+    width: 100vw;
+    padding: 20px;
+
+}
+
+form {
+    margin: 60px 0 20px 0;
+    padding: 20px;
+}
+
+
+label {
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 10px;
+    color: #777;
+}
+
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 14px;
+    margin-right: 20px;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+
+}
+
+
+.button-3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #356b30;
+    border-radius: 3px;
+    border-style: none;
+
+}
+
+.button-3:hover {
+    color: #fff;
+    background-color: #444;
+}
+
+/*FOOTER*/
+
+footer {
+    height: 260px;
+    background-color: #356b30;
+}
+
+#logo {
+    margin-left: 10px;
+    position: absolute;
+    height: 200px;
+    width: 100px;
+    background-image: url(/image/Lucky-Shrub-Logos/Asset3.png);
+    background-size: contain;
+
+}
+
+footer h1 {
+    color: #fff;
+    text-align: center;
+    padding-top: 120px;
+    width: 100vw;
+
+}
+
+.copyright {
+    width: 100vw;
+    text-align: center;
+    font-weight: bold;
+    color: aliceblue;
+    padding-top: 30px;
+
+}
+
+
+@media only screen and (min-width: 1025px) {
+    .wrapper {
+        width: 100vw;
+    }
+
+    header h1 {
+        width: 100vw;
+        margin-top: 32px;
+        text-align: center;
+    }
+
+    header nav ul {
+        width: 100vw;
+        margin: 35px;
+        text-align: center;
+    }
+
+    form {
+        margin-left: 35%;
+        display: grid;
+        width: 30vw;
+        align-items: center;
+    }
+
+}
+
+
+@media only screen and (min-width: 801px) and (max-width: 1024px) {
+    body {
+        background-color: beige;
+    }
+
+    header h1 {
+        background: url(image/Lucky-Shrub-Logos/Asset2.png) no-repeat 10%;
+        background-size: 5%;
+    }
+
+    header nav ul li a {
+        width: 100vw;
+        margin: 35px;
+    }
+
+    #products ul {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    #logo {
+        height: 100px;
+        background-image: url(/image/Lucky-Shrub-Logos/Asset3.png);
+        background-repeat: no-repeat;
+        margin-left: 45%;
+
+    }
+
+    form {
+        margin-left: 5%;
+        display: grid;
+        width: ²00vw;
+        align-items: center;
+    }
+
+    footer {
+        width: 100vw;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    body {
+        background-color: lightblue;
+    }
+
+    header h1 {
+        width: 100vw;
+        background: url(image/Lucky-Shrub-Logos/Asset2.png) no-repeat 10%;
+        background-size: 5%;
+    }
+
+    header nav ul li a {
+        color: #fff;
+        display: grid;
+        width: 100vw;
+        border: 1px solid black;
+        background-color: #356b30;
+        z-index: 1;
+        text-align: center;
+        letter-spacing: 5px;
+    }
+
+    .wrapper {
+        width: 100vw;
+    }
+
+    #info {
+        padding: 0;
+
+    }
+
+    form {
+        display: grid;
+        width: 100vw;
+    }
+
+    .button-3 {
+        width: 100vw;
+    }
+
+    #products ul {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    #logo {
+        height: 100px;
+        background-image: url(/image/Lucky-Shrub-Logos/Asset3.png);
+        background-repeat: no-repeat;
+        margin-left: 45%;
+
+    }
+
+    footer {
+        width: 100vw;
+    }
+}
