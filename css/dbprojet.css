@@ -1,0 +1,121 @@
+body {
+  font-size: 14px;
+  color: #bdcae5;
+  margin: 150px;
+  padding: 0;
+  background-color: #111f43;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  font-weight: 600;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0d1731;
+  backdrop-filter: blur(50px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.spotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle closest-side,
+    rgba(29, 78, 216, 0.15),
+    transparent
+  );
+  pointer-events: none;
+  z-index: 30;
+  transition: background-color 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+header {
+  font-size: 10px;
+  text-align: left;
+  color: #1cc49d;
+  padding: 10px;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  color: #bdcae5;
+}
+
+/* TABLEAU */
+table {
+  width: 100%; /* Le tableau prendra 100% de la largeur de la page */
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+tr:not(:last-child) {
+  border-bottom: 1px solid #ffffff1f; /* Ajoute une ligne blanche en bas de chaque ligne sauf la dernière */
+}
+
+/* BUTTON */
+.buttons-container {
+  display: flex; /* Active Flexbox */
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
+  gap: 5px; /* Espace entre les boutons */
+  pointer-events: none;
+}
+
+.custom-tag {
+  display: flex; /* équivalent de 'flex' dans items-center */
+  border-radius: 9999px; /* 'rounded-full' pour rendre les bords complètement arrondis */
+  background-color: rgba(
+    20,
+    184,
+    166,
+    0.1
+  ); /* 'bg-teal-400/10' pour la couleur de fond avec opacité */
+  padding: 0.25rem 0.75rem; /* 'px-3 py-1' pour le padding horizontal et vertical */
+  font-size: 0.75rem; /* 'text-xs' pour la taille de texte */
+  /* 'font-medium' pour la graisse du texte */
+  line-height: 1.25; /* 'leading-5' pour l'espacement des lignes */
+  color: #4fd1c5; /* 'text-teal-300' pour la couleur du texte */
+  font-weight: 600;
+  text-decoration: none;
+}
+
+tr {
+  padding: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  transition: background-color 0.4s ease;
+}
+
+tr:hover {
+  background: #172548;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 20px -20px;
+}

@@ -336,26 +336,6 @@ section:hover strong {
   filter: brightness(1.2);
 }
 
-.experience-item h2 a {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  color: #7e8390;
-  transition: color 0.3s ease;
-}
-
-.experience-item h2 a:hover {
-  color: #1cc49d;
-  transform: translate(15px, 5px);
-  transition: 0.6s ease;
-}
-
-.experience-item h2 img {
-  width: 20px !important;
-  height: 20px !important;
-  margin-right: 5px;
-}
-
 .date {
   margin-top: 25px;
   font-weight: bold;
@@ -374,6 +354,9 @@ section:hover strong {
   margin-bottom: 30px;
   margin-top: 0px;
 }
+.projet-item {
+  cursor: pointer;
+}
 
 projet-item .content p {
   margin-bottom: 0px;
@@ -391,6 +374,7 @@ projet-item .content p {
   display: flex; /* Active Flexbox */
   flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
   gap: 10px; /* Espace entre les boutons */
+  pointer-events: none;
 }
 
 .custom-tag {
@@ -415,6 +399,31 @@ projet-item .content p {
   color: wheat;
 }
 
+#experience h2 a,
+#projets a {
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #7e8390;
+  transition: color 0.3s ease;
+  margin-left: 370px;
+  margin-bottom: 10px;
+}
+
+#experience h2 a:hover,
+#projets a:hover {
+  color: #1cc49d;
+  transform: translate(15px, 5px);
+  transition: 0.6s ease;
+}
+#experience h2 img,
+#projets a img {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 5px;
+}
+
 #projets .projet-item {
   display: flex; /* Active Flexbox */
   align-items: center; /* Centre les éléments verticalement */
@@ -437,21 +446,6 @@ projet-item .content p {
   max-width: 100%; /* Assure que l'image ne dépasse pas son conteneur */
   max-height: 100%; /* Assure que l'image ne dépasse pas la hauteur du conteneur */
   border: none; /* Optionnel: Supprime la bordure de l'image elle-même */
-}
-
-#projets a {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  color: #7e8390;
-  transition: color 0.3s ease;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-}
-#projets a:hover {
-  color: #1cc49d;
-  transform: translate(15px, 5px);
-  transition: 0.6s ease;
 }
 
 #projets .content {
