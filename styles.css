@@ -1,5 +1,4 @@
 body {
-  font-family: "Helvetica", sans-serif;
   font-size: 14px;
   color: #bdcae5;
   margin: 0;
@@ -7,6 +6,10 @@ body {
   background-color: #121f40;
   font-family: "Roboto", sans-serif;
   position: relative;
+}
+h2 {
+  margin: 0;
+  padding: 0;
 }
 
 body::before {
@@ -57,7 +60,6 @@ body::before {
   left: 10%;
   height: 100vh;
   overflow-y: auto;
-  /* border: 1px solid; */
 }
 
 .sidebar a.active {
@@ -73,7 +75,7 @@ body::before {
 .profile {
   background-color: #121f40;
   text-align: left;
-  /* border: 1px solid; */
+
   margin-bottom: 50px;
 }
 
@@ -97,7 +99,7 @@ nav ul {
   list-style: none;
   padding: 0;
   padding-top: 30px;
-  /* border: 1px solid; */
+
   font-size: 12px;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -122,7 +124,7 @@ nav a {
   color: #7e8390;
   display: block;
   padding: 10px 0;
-  /* border: 1px solid; */
+
   font-family: "Roboto", sans-serif;
 }
 
@@ -133,7 +135,7 @@ nav li:hover .barre {
 }
 
 nav li:hover a {
-  color: #f8f8f8;
+  color: wheat;
   letter-spacing: 2px;
 }
 
@@ -174,7 +176,6 @@ section {
   margin-top: 60px;
   margin-bottom: 40px;
   margin-right: 40px;
-  /* text-align: justify; */
   font-size: 18px;
 }
 
@@ -199,9 +200,10 @@ section:hover strong {
   backdrop-filter: blur(13.5px);
   -webkit-backdrop-filter: blur(13.5px);
   transition: background-color 0.4s ease;
-  border: 1px white solid;
 }
-
+.experience-item {
+  font-size: 16px;
+}
 .projet-item,
 .experience-item {
   display: flex;
@@ -259,12 +261,10 @@ section:hover strong {
   font-weight: bold;
   font-size: 14px;
   min-width: 80px;
-  border: 1px white solid;
 }
 
 .content {
   flex-grow: 1;
-  border: 1px solid;
 }
 
 .experience-item:hover h3,
@@ -274,37 +274,75 @@ section:hover strong {
   color: #1cc49d;
 }
 
-.bn62 {
-  color: #1cc49d;
-  background-color: #1b2f31;
-  border-radius: 50px;
-  display: flex;
+.buttons-container {
+  display: flex; /* Active Flexbox */
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
+  gap: 10px; /* Espace entre les boutons */
+}
 
-  justify-content: center;
-  align-items: center;
-  height: 3em;
-  width: 8em;
-  font-size: large;
+.custom-tag {
+  display: flex; /* équivalent de 'flex' dans items-center */
+  border-radius: 9999px; /* 'rounded-full' pour rendre les bords complètement arrondis */
+  background-color: rgba(
+    20,
+    184,
+    166,
+    0.1
+  ); /* 'bg-teal-400/10' pour la couleur de fond avec opacité */
+  padding: 0.25rem 0.75rem; /* 'px-3 py-1' pour le padding horizontal et vertical */
+  font-size: 0.75rem; /* 'text-xs' pour la taille de texte */
+  /* 'font-medium' pour la graisse du texte */
+  line-height: 1.25; /* 'leading-5' pour l'espacement des lignes */
+  color: #4fd1c5; /* 'text-teal-300' pour la couleur du texte */
   font-weight: 600;
+  text-decoration: none;
+}
+.certification:hover .custom-tag,
+.experience-item:hover .custom-tag {
+  color: wheat;
 }
 
 #projets .projet-item {
-  display: flex;
-  max-height: 150px;
+  display: flex; /* Active Flexbox */
+  align-items: center; /* Centre les éléments verticalement */
+  justify-content: start; /* Aligner les éléments au début horizontalement */
+  gap: 20px; /* Espace entre l'image et le texte */
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  padding-top: 0;
 }
 
 .projet-img {
-  border: 1px solid;
-  height: 80px;
-  width: 120px;
-  /* flex-direction: row; */
-}
-.projet-img img {
-  border: 1px solid;
-  height: 80px;
-  width: 120px;
+  flex: 0 1 120px; /* Ne grandit pas, peut rétrécir, base de 120px */
+  display: flex; /* Ajoutez Flexbox ici si nécessaire */
+  justify-content: center; /* Centre horizontalement l'image dans son conteneur */
+
+  height: 80px; /* Hauteur fixe */
 }
 
+.projet-img img {
+  max-width: 100%; /* Assure que l'image ne dépasse pas son conteneur */
+  max-height: 100%; /* Assure que l'image ne dépasse pas la hauteur du conteneur */
+  border: none; /* Optionnel: Supprime la bordure de l'image elle-même */
+}
+#projets a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #7e8390;
+  transition: color 0.3s ease;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+#projets a:hover {
+  color: #1cc49d;
+  transform: translate(15px, 5px);
+  transition: 0.6s ease;
+}
+
+#projets .content {
+  flex: 1;
+}
 /* Footer */
 footer {
   text-align: center;
