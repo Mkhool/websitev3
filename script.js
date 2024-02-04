@@ -47,3 +47,33 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const heroSection = document.querySelector(".hero-section");
+  const introText = document.querySelector("#intro-text");
+  const conclusionText = document.querySelector("#conclusion-text");
+  const highlightTextStrongElements = document.querySelectorAll(
+    "#highlight-text strong"
+  );
+
+  // Fonction pour changer la couleur des éléments <strong>
+  function changeStrongElementsColor(color) {
+    highlightTextStrongElements.forEach(function (element) {
+      element.style.color = color;
+    });
+  }
+
+  // Ajoute un écouteur d'événements pour l'entrée de la souris (mouseenter) sur .hero-section
+  heroSection.addEventListener("mouseenter", function () {
+    introText.style.filter = "blur(30px)";
+    conclusionText.style.filter = "blur(30px)";
+    changeStrongElementsColor("#1cc49d"); // Change la couleur en #1cc49d
+  });
+
+  // Ajoute un écouteur d'événements pour la sortie de la souris (mouseleave) sur .hero-section
+  heroSection.addEventListener("mouseleave", function () {
+    introText.style.filter = "";
+    conclusionText.style.filter = "";
+    changeStrongElementsColor(""); // Réinitialise la couleur des éléments <strong>
+  });
+});
