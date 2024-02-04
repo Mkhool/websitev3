@@ -466,3 +466,37 @@ section {
   text-decoration: none;
   color: inherit;
 }
+
+/* MEDIA QUERY  */
+@media screen and (max-width: 960px) and (min-width: 600px) {
+  .card__background {
+    margin-top: 100px;
+    height: 200px; /* Hauteur temporaire pour le test */
+    width: 100%; /* Prend toute la largeur de .card */
+  }
+
+  .card__heading {
+    margin-top: 320px;
+    margin-left: 70px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    flex-direction: column; /* Inverse l'ordre des colonnes (aside en haut, main en bas) */
+  }
+
+  .sidebar {
+    width: 100%; /* La sidebar prendra toute la largeur de l'écran */
+    position: static; /* Retire la position fixe */
+    margin: 0; /* Supprime les marges */
+  }
+
+  .scrollable-content {
+    margin-left: 0; /* Réinitialise la marge gauche */
+  }
+  #experience h2 a,
+  #projets a {
+    margin-left: 0px;
+  }
+}
